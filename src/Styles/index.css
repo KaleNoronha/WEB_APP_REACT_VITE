@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Global Variables */
+:root {
+  --e-global-typography-text-font-family: "Manrope";
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--e-global-typography-text-font-family), sans-serif;
+  background-color: #0B1117;
+  color: #DFDFDF;
+}
