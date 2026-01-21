@@ -1,15 +1,12 @@
-import { useState } from "react"
 import Footer from "./Footer"
 import Header from "./Header"
-import MainView from "./MainView"
+import {Outlet} from 'react-router'
 
 function Layout() {
-  const [currentSection, setcurrentSection] = useState('home');
-
   return (
     <div>
-      <Header setcurrentSection={setcurrentSection} currentSection={currentSection} />
-      <MainView currentSection={currentSection} />
+      <Header />
+      <Outlet />
       <Footer />
     </div>
   )
