@@ -67,9 +67,10 @@ function Footer() {
             </div>
 
             {/* Bottom Section */}
-            <div className="border-t border-[#272C32] mt-8">
-                <div className="max-w-7xl mx-auto px-16 py-8 flex justify-between items-center">
-                    <p className="text-base">Copyright © 2024 ASK Project</p>
+            
+            <div className='border-t border-[#272C32] flex justify-center'>
+                <div className="flex justify-between max-w-7xl w-full items-center py-8">
+                    <p style={{ fontFamily: 'var(--e-global-typography-text-font-family)' }}>Copyright © 2024 ASK Project</p>
                     <div className="flex items-center gap-8">
                         <a href="#" className="text-base hover:text-red-500 transition-colors">Privacy Policy</a>
                         <a href="#" className="text-base hover:text-red-500 transition-colors">Terms & Services</a>

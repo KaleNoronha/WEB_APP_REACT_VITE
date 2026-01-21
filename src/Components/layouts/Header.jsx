@@ -1,13 +1,14 @@
 import SocialLink from '../ui/SocialLink';
 import Button from '../ui/Button';
+import { NavLink } from 'react-router';
 
-function Header({ setcurrentSection, currentSection }) {
+function Header() {
     const navItems = [
-        { name: 'Home', section: 'home' },
-        { name: 'About', section: 'about' },
-        { name: 'Service', section: 'service' },
-        { name: 'Page', section: 'page' },
-        { name: 'Contact', section: 'contact' }
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Service', path: '/service' },
+        { name: 'Page', path: '/page' },
+        { name: 'Contact', path: '/contact' }
     ];
 
     return (
@@ -40,15 +41,17 @@ function Header({ setcurrentSection, currentSection }) {
                     </div>
                     <nav className='w-1/2 flex justify-center items-center text-[#768D8D] font-[Michroma]'>
                         {navItems.map((item) => (
-                            <a
-                                key={item.section}
-                                onClick={() => setcurrentSection(item.section)}
-                                className={`mx-8 hover:text-red-500 transition-colors cursor-pointer ${
-                                    currentSection === item.section ? 'text-red-500' : ''
-                                }`}
+                            <NavLink
+                                key={item.path}
+                                to={item.path}
+                                className={({ isActive }) => 
+                                    `mx-8 hover:text-red-500 transition-colors ${
+                                        isActive ? 'text-red-500' : ''
+                                    }`
+                                }
                             >
                                 {item.name}
-                            </a>
+                            </NavLink>
                         ))}
                     </nav>
                     <div className='w-1/4 flex justify-center items-center'>
